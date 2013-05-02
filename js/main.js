@@ -1,7 +1,7 @@
 /* Init */
 
 play = 0;
-flux = "http://oxyradio.net:8000/";
+flux = "http://stream.giroll.org:8000/";
 
 /* Gestion du player */
 
