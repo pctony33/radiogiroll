@@ -41,6 +41,13 @@ $(document).ready(function(){
         }
     });
 
+	$.ajax({
+	  url: "http://live.stream.giroll.org/mobile.php",
+	  cache: false
+	}).done(function( html ) {
+	  $("#podcastslist").append(html);
+	});
+
 });
 
 function onSuccess() {
