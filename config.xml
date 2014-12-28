@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.giroll.radio"
-        version   = "1.0.4">
+        version   = "1.0.5">
 
     <name>RadioGiroll</name>
 
@@ -10,7 +10,7 @@
         Ecoutez Radio Giroll depuis votre Mobile !
     </description>
 
-    <preference name="phonegap-version" value="2.2.0" />
+    <preference name="phonegap-version" value="3.6.3" />
 
     <icon src="img/logo.png" />
 
