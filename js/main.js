@@ -1,7 +1,7 @@
 /* Init */
 
 play = 0;
-flux = "http://stream.giroll.org:8000/";
+flux = "http://stream.giroll.org:8000/radio-hd.mp3";
 
 /* Gestion du player */
 
@@ -12,8 +12,7 @@ $(document).ready(function(){
             play = -1;
             $.mobile.showPageLoadingMsg();
             $('#'+this.id).hide();
-            $('#choicequality').hide();
-            radio = new Media(flux+$('input[name=quality]:checked').val()+".mp3", onSuccess, onError);
+            radio = new Media(flux, onSuccess, onError);
             radio.play();
             var mediaTimer = setInterval(function() {
                 radio.getCurrentPosition(
@@ -35,7 +34,6 @@ $(document).ready(function(){
             play = 0;
             $('#'+this.id+' .ui-btn-text').text('Ecouter la radio !');
             $(this).removeClass("ui-btn-active");
-            $('#choicequality').show();
             $('#onair').hide();
             radio.stop();
         }
