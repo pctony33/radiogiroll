@@ -4,9 +4,12 @@ play = 0;
 flux = "http://stream.giroll.org:8000/radio-hd.mp3";
 
 function onSuccess() {
+    console.log("playAudio():Audio Success");
 }
 
 function onError(error) {
+    alert('code: '    + error.code    + '\n' +
+          'message: ' + error.message + '\n');
 }
 
 /* Force l'ouverture du naviguateur hors application */
