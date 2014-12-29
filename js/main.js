@@ -3,9 +3,25 @@
 play = 0;
 flux = "http://stream.giroll.org:8000/radio-hd.mp3";
 
-/* Gestion du player */
+function onSuccess() {
+}
 
-$(document).ready(function(){
+function onError(error) {
+}
+
+/* Force l'ouverture du naviguateur hors application */
+
+function loadURL(url){ 
+    navigator.app.loadUrl(url, { openExternal:true }); 
+}
+
+/* Annule le history.back(); sur le bouton Back */
+
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+
     $('#onair').hide();
     $("#listenRadioButton").click("click tap", function(){
         if(play == 0) {
@@ -45,27 +61,6 @@ $(document).ready(function(){
 	}).done(function( html ) {
 	  $("#podcastslist").append(html);
 	});
-
-});
-
-function onSuccess() {
-}
-
-function onError(error) {
-}
-
-/* Force l'ouverture du naviguateur hors application */
-
-function loadURL(url){ 
-    navigator.app.loadUrl(url, { openExternal:true }); 
-}
-
-/* Annule le history.back(); sur le bouton Back */
-
-document.addEventListener("deviceready", onDeviceReady, false);
-
-function onDeviceReady() {
-    document.addEventListener("backbutton", onBackKeyDown, false);
 }
  
 function onBackKeyDown()
