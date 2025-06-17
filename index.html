@@ -1,30 +1,41 @@
 <!DOCTYPE html>
-<html> 
+<!--
+    Page principale de l'application Radio Giroll.
+    Utilise jQuery Mobile pour l'interface.
+-->
+<html>
     <head> 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title></title> 
+        <!-- Feuilles de style jQuery Mobile -->
         <link rel="stylesheet" href="js/jquery.mobile-1.3.0.min.css" />
         <link rel="stylesheet" href="js/jquery.mobile.theme-1.3.0.min.css" />
         <link rel="stylesheet" href="js/jquery.mobile.structure-1.3.0.min.css" />
+        <!-- Style personnalisé de l'application -->
         <link rel="stylesheet" href="css/main.css" />
+        <!-- Librairies JavaScript -->
         <script src="js/jquery-1.9.1.min.js"></script>
-    	<script src="js/jquery.mobile-1.3.0.min.js"></script>
+        <script src="js/jquery.mobile-1.3.0.min.js"></script>
+        <!-- Cordova -->
         <script src="cordova.js"></script>
+        <!-- Code applicatif -->
         <script src="js/main.js"></script>
     </head> 
 <body> 
 
-<!-- Home -->
+<!-- Page "Live" : lecture du flux -->
 <div data-role="page" id="page1">
     <div data-role="content">
         <div style=" text-align:center">
             <img src="img/ecoute.png">
         </div>
+        <!-- Indicateur affiché lorsque la radio joue -->
         <div style="text-align:center" id="onair">
             <br/>
             <img src="img/onair.gif">
         </div>
+        <!-- Bouton principal pour démarrer / arrêter le flux -->
         <a data-role="button" data-theme="e" href="#page1" data-icon="arrow-r"
         data-iconpos="left" id="listenRadioButton">
             Ecouter la radio !
@@ -52,9 +63,10 @@
 
 </div>
 
-<!-- Podcasts -->
+<!-- Page listant les podcasts -->
 <div data-role="page" id="podcasts">
     <div data-role="content">
+        <!-- Liste injectée dynamiquement -->
         <div id="podcastslist"></div>
     </div>
 
